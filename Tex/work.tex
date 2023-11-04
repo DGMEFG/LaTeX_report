@@ -1,8 +1,7 @@
-\documentclass{article}
+\documentclass[UTF8,AutoFakeBold]{article}
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
-\usepackage{ctex}
 \usepackage{float}
 \usepackage{tabularx}
 \usepackage{hyperref}
@@ -103,7 +102,10 @@
 %
 
 %
+\usepackage{ctex}
+\usepackage{fontspec,xunicode,xltxtra}
 \setCJKmainfont{SimSun}
+\setCJKmonofont{SimSun} % 设置中文等宽字体
 
 \newcommand{\hmwkTitle}{Project}
 \newcommand{\hmwkDueDate}{March 20th, 2023, 12:00am}
@@ -165,4 +167,8 @@
 \include{chapter3}
 \pagebreak
 \include{chapter4}
+\pagebreak
+\include{chapter5}
+\pagebreak
+\include{chapter6}
 \end{document}
