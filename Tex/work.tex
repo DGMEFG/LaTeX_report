@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{ctex}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{lipsum}
+\usetikzlibrary{automata,positioning}
+\tcbuselibrary{breakable}
+\usepackage{svg}
+\usepackage{indentfirst}
+\usepackage{listings}
+\lstset{tabsize=6, keepspaces=true,language=Python,
+	xleftmargin=2em,xrightmargin=0em, aboveskip=1em,
+	%backgroundcolor=\color{gray!20},  % 定义背景颜色
+	frame=trBL,% 表示不要边框
+	extendedchars=false,              % 解决代码跨页时，章节标题，页眉等汉字不显示的问题
+	numberstyle=\bf,
+	numberstyle=\color{HTML}{5bd1d7}
+	basicstyle=\bf,
+	keywordstyle=\color{blue}\bfseries,
+	breakindent=10pt,
+	identifierstyle=,                 % nothing happens
+	commentstyle=\color{red}\small,  % 注释的设置
+	morecomment=[l][\color{green}]{\#},
+	numbers=left,stepnumber=1,numberstyle=\scriptsize,
+	showstringspaces=false,
+	showspaces=false,
+	flexiblecolumns=true,
+	breaklines=true, breakautoindent=true,breakindent=4em,
+	escapeinside={/*@}{@*/},
+	frameround = fttt,
+}
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.5}
+
+\hypersetup{
+	colorlinks=false,
+	linkbordercolor=white,
+	pdfborderstyle={/S/U/W 0} % 可选，移除下划线
+}
+
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+% \chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\rhead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle ~~ \firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+%
+% Create Problem Sections
+%
+
+
+\setcounter{secnumdepth}{10}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{}{}\nobreak{}
+
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this template for an
+% example.
+%
+
+
+
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+%
+\setCJKmainfont{SimSun}
+
+\newcommand{\hmwkTitle}{Project}
+\newcommand{\hmwkDueDate}{March 20th, 2023, 12:00am}
+\newcommand{\hmwkClass}{xxx\;xxx}
+\newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{xxx}
+\newcommand{\hmwkAuthorName}{} %Name & Student ID
+
+%
+% Title Page
+%
+
+
+\title{
+	\includesvg[scale = 1.2]{pic/logo.svg} %include Logo
+	\vspace{0.2in}
+	\vspace{0.8cm}\\
+	\textmd{\textbf{\hmwkClass: \hmwkTitle}}\\
+	\normalsize\vspace{0.1in}\small{Due\ on\ \zhtoday}\\
+	\vspace{0.1in}\large{指导教师: ~\textit{\hmwkClassInstructor\ \hmwkClassTime}}\\
+	\vspace{0.5in}
+	\Large{标题}\\
+	\vspace{0.5in}	
+	\large{Author}\\
+	\vspace{0.2in}
+	
+}
+
+
+\date{}
+
+\titleformat{\section}
+{\fontsize{14pt}{0}\heiti }    %定义字体heiti黑体
+{\bfseries\thesection}{1em}
+{}
+[]
+
+\titleformat{\subsection}
+{\heiti}    %定义字体heiti黑体
+{\bfseries\arabic{section}.\bfseries\arabic{subsection}}{1em}
+{}
+[]
+
+\titleformat{\subsubsection}
+{\heiti}    %定义字体heiti黑体
+{\bfseries\arabic{section}.\bfseries\arabic{subsection}.\bfseries\arabic{subsubsection}}{1em}
+{}
+[]
+
+\setlength{\parindent}{2em}
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+\include{chapter1}
+\include{chapter2}
+\newpage
+\include{chapter3}
+\pagebreak
+\include{chapter4}
+\end{document}
